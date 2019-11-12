@@ -12,12 +12,7 @@ stage('Build image') {
 
         app = docker.build("tunnudocker/devops")
     }
-  stage('Test image') {
-       
-        app.inside {
-            sh 'echo "Tests passed"'
-        }
-    }
+  
     
   stage('Push image') {
         /* Finally, we'll push the image with two tags:

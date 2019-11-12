@@ -16,7 +16,7 @@ stage('Build image') {
     stage('Test image') {
        
         
-            sh 'echo "Tests passed"'
+            sh 'make test'
         
     }
 

@@ -10,7 +10,7 @@ stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build -t("tunnudocker/devops")
+        app = docker.build("tunnudocker/devops")
     }
   
     stage('Test image') {

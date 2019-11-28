@@ -23,6 +23,7 @@ node {
         /* Approving the build befor proceeding further to push the image to doker hub */
         
         input('Do you want to proceed?')
+    }
              
     stage('Push image') {
         /* Finally, we'll push the image with two tags:

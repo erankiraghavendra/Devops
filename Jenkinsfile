@@ -13,7 +13,7 @@ node {
 
     stage('Testing') {
         /*we're going to test weather git is installed and displaying the version of the git */
-       sh 'python --version'   
+       sh 'git --version'   
     }
     
     stage('Build image') {

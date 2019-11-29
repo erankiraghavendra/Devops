@@ -11,17 +11,18 @@ node {
         checkout scm
     }
 
-    stage('Testing') {
-        /*we're going to test weather git is installed and displaying the version of the git */
-       sh 'git --version'   
-    }
-    
-    stage('Build image') {
+   stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
         app = docker.build("tunnudocker/dockerpipelinebuild")
     }
+    
+     stage('Testing') {
+        /*we're going to test weather git is installed and displaying the version of the git */
+       sh 'git --version'   
+    }
+    
     
     stage('Approve') {
         /* Approving the build befor proceeding further to push the image to doker hub */

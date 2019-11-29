@@ -1,5 +1,9 @@
 node {
     def app
+    environment {
+    registry = "tunnudocker/dockerpipelinebuild"
+    registryCredential = 'docker-hub-credentials'
+  }
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */

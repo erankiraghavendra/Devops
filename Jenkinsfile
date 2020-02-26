@@ -40,4 +40,9 @@ node {
             app.push("latest")
         }
     }
+    
+    stage('Deploynment') {
+        /*we're going to test weather git is installed and displaying the version of the git */
+       sh 'docker container run -d tunnudocker/dockerpipelinebuild'   
+    }
 }

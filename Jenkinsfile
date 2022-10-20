@@ -43,6 +43,6 @@ node {
     
     stage('Deploynment') {
         /*we're going to test weather git is installed and displaying the version of the git */
-         sh 'docker container run it -d tunnudocker/dockerpipelinebuild /bin/bash'   
+         sh 'docker container run it -d tunnudocker/dockerpipelinebuild:latest /bin/bash'   
     }
 }
